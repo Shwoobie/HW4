@@ -9,7 +9,7 @@ public abstract class Seq {
 
 
 	abstract String toString();
-	abstract void Jumble();
-	abstract void Delta();
-	abstract void Constant();
+	abstract void Constant( int num, int value );
+	abstract void Delta( int num, int initial, int delta );
+	abstract void Jumble( int [] values);
 }
