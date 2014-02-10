@@ -4,7 +4,7 @@ public class Jumble extends Seq{
 		//this.values = new int [](values.length);
 		if(values.length == 0){
 			//system.err.print("this is a print stestsf sdf ");
-			this.values = null;
+			this.values = new int[]{};
 		}
 
 		else{	
