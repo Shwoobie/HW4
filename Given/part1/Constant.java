@@ -10,7 +10,7 @@ public class Constant extends Seq{
 	}
 
 	public String toString(){
-		System.err.print("[ "+num+" : "+ value+" ]");
+		return("[ "+num+" : "+ value+" ]");
 	}
 
 

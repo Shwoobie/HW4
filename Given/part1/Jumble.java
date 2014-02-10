@@ -5,11 +5,12 @@ public class Jumble extends Seq{
 		System.arraycopy(values, 0, this.values, 0, values.length());
 	}
 	public String toString(){
-		System.err.print("{ "+values.length+" :");
-			for (int i = 0; i < values.length; i++){
-				System.err.print(" "+values[i]);
-			}
-		System.err.print(" }");
+		String temp = ("{ "+values.length+" :");
+		for (int i = 0; i < values.length; i++){
+			temp = temp.concat(" "+values[i]);
+		}
+		temp = temp.concat(" }");
+		return temp;
 	}//toString()
 
 
