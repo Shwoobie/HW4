@@ -8,7 +8,7 @@ public abstract class Seq {
 	protected int [] values;
 
 
-	abstract String toString();
+	//abstract String toString();
 	//public Virtual void Constant( int num, int value );
 	//public void Delta( int num, int initial, int delta );
 	//public void Jumble( int [] values);
