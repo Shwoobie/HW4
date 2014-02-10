@@ -8,7 +8,7 @@ public class Jumble extends Seq{
 		}
 
 		else{	
-			this.values = new int[] (values.length);
+			this.values = new int[values.length];
 			System.arraycopy(values, 0, this.values, 0, values.length);
 		}
 	}
