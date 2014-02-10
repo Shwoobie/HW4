@@ -8,9 +8,10 @@ public class Delta extends Seq{
 			this.initial = 0;
 			this.delta = 0;
 		}
-		else
+		else{
 		this.initial = initial;
 		this.delta = delta;
+		}
 	}
 	public String toString(){
 		return("< "+num+" : "+ initial+ " &"+ delta+" >");
