@@ -12,7 +12,7 @@ public class Delta extends Seq{
 		this.initial = initial;
 		this.delta = delta;
 	}
-	String toString(){
+	public String toString(){
 		System.err.print("< "+num+" : "+ initial+ " &"+ delta+" >");
 	}
 

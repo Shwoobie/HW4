@@ -9,7 +9,7 @@ public class Constant extends Seq{
 		else{ this.value = value;}
 	}
 
-	String toString(){
+	public String toString(){
 		System.err.print("[ "+num+" : "+ value+" ]");
 	}
 
