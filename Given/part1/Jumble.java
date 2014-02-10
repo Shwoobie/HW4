@@ -2,7 +2,13 @@ public class Jumble extends Seq{
 	//protected int [] values;
 	public Jumble( int [] values){
 		//this.values = new int [](values.length);
-		System.arraycopy(values, 0, this.values, 0, values.length);
+		if(values == NULL){
+			this.values == NULL;
+		}
+
+		else{	
+			System.arraycopy(values, 0, this.values, 0, values.length);
+		}
 	}
 	public String toString(){
 		String temp = ("{ "+values.length+" :");
