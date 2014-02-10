@@ -2,8 +2,8 @@ public class Jumble extends Seq{
 	//protected int [] values;
 	public Jumble( int [] values){
 		//this.values = new int [](values.length);
-		if(values == NULL){
-			this.values == NULL;
+		if(values == null){
+			this.values = null;
 		}
 
 		else{	
