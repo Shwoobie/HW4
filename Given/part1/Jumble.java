@@ -13,7 +13,13 @@ public class Jumble extends Seq{
 		}
 	}
 	public String toString(){
-		String temp = ("{ "+values.length+" :");
+		
+		if( values.length == 0) {
+			String temp =new String ("");
+			return temp = temp.concat("{ 0 : }");
+		}
+		String temp = new String ("{ "+values.length+" :");
+		
 		for (int i = 0; i < values.length; i++){
 			temp = temp.concat(" "+values[i]);
 		}
