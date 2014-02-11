@@ -14,13 +14,14 @@ public class Delta extends Seq{
 		this.delta = delta;
 		}
 
+System.err.println("minval:" + minVal + "init: " + initial);
+
 		if (num == 0){
 			this.minVal = 0;
 		}
 		else if (minVal == -99979) {
 			this.minVal = initial;
 		}
-		System.err.println("minval:" + minVal + "init: " + initial);
 		else if (minVal > initial) {
 			System.err.println("minval:" + minVal + "init: " + initial);
 			this.minVal = initial;
