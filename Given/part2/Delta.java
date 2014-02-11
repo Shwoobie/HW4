@@ -14,10 +14,10 @@ public class Delta extends Seq{
 		this.delta = delta;
 		}
 
-		//if (num == 0){
-		//	this.minVal = 0;
-		//}
-		if (minVal == 0) {
+		if (num == 0){
+			this.minVal = 0;
+		}
+		else if (minVal == 0) {
 			this.minVal = delta;
 		}
 		else if (minVal > delta) {
