@@ -21,6 +21,7 @@ public class Delta extends Seq{
 			this.minVal = initial;
 		}
 		else if (minVal > initial) {
+			System.out.println("minval:" + minVal + "init: " + initial);
 			this.minVal = initial;
 		}
 	}
