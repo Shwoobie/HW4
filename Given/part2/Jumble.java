@@ -28,6 +28,11 @@ public class Jumble extends Seq{
 		}
 
 	}
+
+	public int min(){
+		return minVal;
+	}
+	
 	public String toString(){
 		
 		if( values.length == 0) {
