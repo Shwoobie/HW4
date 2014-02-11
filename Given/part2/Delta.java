@@ -28,7 +28,7 @@ public class Delta extends Seq{
 	}
 
 	public int min(){
-		System.err.println("minval:" + minVal + "init: " + initial);
+		//System.err.println("minval:" + minVal + "init: " + initial);
 		return minVal;
 	}
 
