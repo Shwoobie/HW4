@@ -19,11 +19,10 @@ public class Delta extends Seq{
 		if (num == 0){
 			this.minVal = 0;
 		}
-		else if (minVal == -99979) {
-			this.minVal = initial;
+		else if (delta < 0) {
+			this.minVal = (initial + ((num-1)*delta));
 		}
-		else if (minVal > initial) {
-			//System.err.println("minval:" + minVal + "init: " + initial);
+		else () {
 			this.minVal = initial;
 		}
 	}
