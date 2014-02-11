@@ -20,6 +20,7 @@ public class Delta extends Seq{
 		else if (minVal == -99979) {
 			this.minVal = initial;
 		}
+		System.err.println("minval:" + minVal + "init: " + initial);
 		else if (minVal > initial) {
 			System.err.println("minval:" + minVal + "init: " + initial);
 			this.minVal = initial;
