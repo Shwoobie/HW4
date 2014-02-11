@@ -1,9 +1,9 @@
 public class Jumble extends Seq{
 	//protected int [] values;
+	private int minVal = 0;
 	public Jumble( int [] values){
 		//this.values = new int [](values.length);
 		if(values.length == 0){
-			//system.err.print("this is a print stestsf sdf ");
 			this.values = new int[]{};
 		}
 
@@ -11,7 +11,22 @@ public class Jumble extends Seq{
 			this.values = new int[values.length];
 			System.arraycopy(values, 0, this.values, 0, values.length);
 		}
-	}
+
+		if(values.length == 0){
+			this.minVal = 0;
+		}
+		else if (minVal == 0) {
+			minVal = values[0];
+			for (int i = 0; i < values.length; i++){
+				minVal = java.lang.Math.min(minVal, values[i]);
+			}
+		}
+		else{
+			for (int i = 0; i < values.length; i++){
+				minVal = java.lang.Math.min(minVal, values[i]);
+			}
+
+		}
 	public String toString(){
 		
 		if( values.length == 0) {
