@@ -25,8 +25,9 @@ public class Jumble extends Seq{
 			for (int i = 0; i < values.length; i++){
 				minVal = java.lang.Math.min(minVal, values[i]);
 			}
-
 		}
+
+	}
 	public String toString(){
 		
 		if( values.length == 0) {
