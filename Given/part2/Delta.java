@@ -17,7 +17,7 @@ public class Delta extends Seq{
 		//if (num == 0){
 		//	this.minVal = 0;
 		//}
-		else if (minVal == 0) {
+		if (minVal == 0) {
 			this.minVal = initial;
 		}
 		else if (minVal > initial) {
