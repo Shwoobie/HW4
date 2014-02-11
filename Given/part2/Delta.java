@@ -22,7 +22,7 @@ public class Delta extends Seq{
 		else if (delta < 0) {
 			this.minVal = (initial + ((num-1)*delta));
 		}
-		else () {
+		else {
 			this.minVal = initial;
 		}
 	}
