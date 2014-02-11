@@ -1,7 +1,7 @@
 public class Constant extends Seq{
 	//protected int num;
 	//protected int value;
-	private int minVal = 0;
+	private int minVal = -99979;
 	public Constant( int num, int value ){
 		this.num = num;
 		if (num == 0) {
@@ -12,7 +12,7 @@ public class Constant extends Seq{
 		if (num == 0){
 			this.minVal = 0;
 		}
-		else if (minVal == 0) {
+		else if (minVal == -99979) {
 			this.minVal = value;
 		}
 		else if (minVal > value) {
