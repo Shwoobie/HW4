@@ -2,7 +2,7 @@ public class DeltaIt implements SeqIt{
 	public DeltaIt(Delta s){
 		itt = 0;
 		max = s.num;
-		nxt = s.intial;
+		nxt = s.initial;
 		delta = s.delta;
 	}
 
@@ -14,7 +14,7 @@ public class DeltaIt implements SeqIt{
 		if(itt == 0)
 		{
 			itt++;
-			return initial;
+			return nxt;
 		}
 		else if(hasNext()){
 			nxt += delta;
