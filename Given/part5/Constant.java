@@ -28,6 +28,7 @@ public class Constant extends Seq{
 		return("[ "+num+" : "+ value+" ]");
 	}
 	public ConstantIt createSeqIt(){
-		return (new ConstantIt(this));
+		ConstantIt itr = new ConstantIt(this);
+		return (itr);
 	}
 }

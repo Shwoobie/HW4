@@ -49,6 +49,7 @@ public class Jumble extends Seq{
 	}//toString()
 
 	public JumbleIt createSeqIt(){
-		return (new ConstantIt(this));
+		JumbleIt itr = new JumbleIt(this);
+		return (itr);
 	}
 }

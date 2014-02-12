@@ -36,6 +36,7 @@ public class Delta extends Seq{
 		return("< "+num+" : "+ initial+ " &"+ delta+" >");
 	}
 	public DeltaIt createSeqIt(){
-		return (new ConstantIt(this));
+		DeltaIt itr = new DeltaIt(this);
+		return (itr);
 	}
 }
