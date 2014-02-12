@@ -21,12 +21,12 @@ public class Plus {
 		Delta small, big;
 		//int aVal, bVal;
 		if(a.num < b.num){
-			small = new Delta(a.num, a.value);
-			big = new Delta(b.num, b.value);
+			small = new Delta(a.num, a.initial, a.delta);
+			big = new Delta(b.num, b.initial, a.delta);
 		}
 		else{
-			small = new Delta(b.num, b.value);
-			big = new Delta(a.num, a.value);
+			small = new Delta(b.num, b.initial, a.delta);
+			big = new Delta(a.num, a.initial, a.delta);
 		}
 		//ContstantIt ait = small.createSeqIt();
 		//ContstantIt bit = big.createSeqIt();
@@ -40,12 +40,12 @@ public class Plus {
 		//int aVal, bVal;
 		int i = 0;
 		if(a.num < b.num){
-			small = new Jumble(a.num, a.value);
-			big = new Jumble(b.num, b.value);
+			small = new Jumble(a.values);
+			big = new Jumble(b.values);
 		}
 		else{
-			small = new Jumble(b.num, b.value);
-			big = new Jumble(a.num, a.value);
+			small = new Jumble(b.values);
+			big = new Jumble(a.values);
 		}
 		JumbleIt ait = small.createSeqIt();
 		JumbleIt bit = big.createSeqIt();
