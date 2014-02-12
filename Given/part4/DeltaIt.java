@@ -23,8 +23,9 @@ public class DeltaIt implements SeqIt{
 		}
 		else{
 			throw new UsingIteratorPastEndException();
+			//return 0;
 		}
-		return 0;
+//		return 0;
 
 	}
 
