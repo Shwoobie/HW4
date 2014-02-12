@@ -172,7 +172,7 @@ public class Plus {
 		}
 		else{
 			small = new Jumble(constArray);
-			big = new Jumble(a.values);
+			big = new Jumble(b.values);
 		}
 		JumbleIt ait = small.createSeqIt();
 		JumbleIt bit = big.createSeqIt();
