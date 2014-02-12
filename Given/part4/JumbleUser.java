@@ -33,16 +33,19 @@ public class JumbleUser{
 		int curr;
 		int prev = -999799;
 		while(user.hasNext()){
-			if((curr = user.next()) >= prev){
-				counter++;
-			}
-			else{
-				counter = 1;	
-			}
-			prev = curr;
-			if (counter > longest){
-				longest = counter;
-			}
+			try{
+				if((curr = user.next()) >= prev){
+					counter++;
+				}
+				else{
+					counter = 1;	
+				}
+				prev = curr;
+				if (counter > longest){
+					longest = counter;
+				}
+			}catch(UsingIteratorPastEndException e){}
+			
 		}
 		return longest;
 	}
