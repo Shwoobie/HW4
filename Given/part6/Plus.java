@@ -51,7 +51,7 @@ public class Plus {
 		while (ait.hasNext()){
 			try{
 				//aVal = ait.next() + bit.next();
-				small.value[i++]= ait.next() + bit.next();
+				small.values[i++]= ait.next() + bit.next();
 
 			}catch(UsingIteratorPastEndException e){}
 		}
