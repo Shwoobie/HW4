@@ -6,7 +6,7 @@ public class JumbleUser{
 		int counter = 0;
 		int curr;
 		int prev = -999799;
-		while((boolean)1){
+		while(true){
 			try{
 				if((curr = user.next()) >= prev){
 					counter++;

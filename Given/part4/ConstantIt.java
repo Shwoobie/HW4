@@ -18,7 +18,7 @@ public class ConstantIt implements SeqIt{
 		else{
 			throw new UsingIteratorPastEndException();
 		}
-		return 0;
+		//return 0;
 	}
 
 	private int itt;

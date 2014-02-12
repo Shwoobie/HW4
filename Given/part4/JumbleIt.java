@@ -16,7 +16,7 @@ public class JumbleIt implements SeqIt{
 			throw new UsingIteratorPastEndException();
 		}
 
-		return 0;
+		//return 0;
 	}
 
 	private int i;
