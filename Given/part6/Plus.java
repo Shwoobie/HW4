@@ -23,17 +23,17 @@ public class Plus {
 		//int aVal, bVal;
 		if(a.num < b.num){
 			small = new Delta(a.num, a.initial, a.delta);
-			big = new Delta(b.num, b.initial, a.delta);
+			big = new Delta(b.num, b.initial, b.delta);
 		}
 		else{
-			small = new Delta(b.num, b.initial, a.delta);
+			small = new Delta(b.num, b.initial, b.delta);
 			big = new Delta(a.num, a.initial, a.delta);
 		}
 		//ContstantIt ait = small.createSeqIt();
 		//ContstantIt bit = big.createSeqIt();
 		small.initial = small.initial + big.initial;
 		small.delta = small.delta + big.delta;
-		
+		//System.err.println("Small Delta is: "+small.value);
 		last = new Delta(small.num, small.initial, small.delta);
 		return last;
 
