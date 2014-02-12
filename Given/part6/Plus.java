@@ -14,19 +14,19 @@ public class Plus {
 		//ContstantIt ait = small.createSeqIt();
 		//ContstantIt bit = big.createSeqIt();
 		small.value = small.value + big.value;
-		System.err.println(small.value);
+		//System.err.println(small.value);
 		return small;
 	}
 	public static Seq plus (Delta a , Delta b ){
 		Delta small, big;
 		//int aVal, bVal;
 		if(a.num < b.num){
-			small = a;
-			big = b;
+			small = new Delta(a.num, a.value);
+			big = new Delta(b.num, b.value);
 		}
 		else{
-			small = b;
-			big = a;
+			small = new Delta(b.num, b.value);
+			big = new Delta(a.num, a.value);
 		}
 		//ContstantIt ait = small.createSeqIt();
 		//ContstantIt bit = big.createSeqIt();
@@ -40,12 +40,12 @@ public class Plus {
 		//int aVal, bVal;
 		int i = 0;
 		if(a.num < b.num){
-			small = a;
-			big = b;
+			small = new Jumble(a.num, a.value);
+			big = new Jumble(b.num, b.value);
 		}
 		else{
-			small = b;
-			big = a;
+			small = new Jumble(b.num, b.value);
+			big = new Jumble(a.num, a.value);
 		}
 		JumbleIt ait = small.createSeqIt();
 		JumbleIt bit = big.createSeqIt();
