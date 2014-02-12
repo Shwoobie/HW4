@@ -48,12 +48,12 @@ public class Plus {
 		}
 		JumbleIt ait = small.createSeqIt();
 		JumbleIt bit = big.createSeqIt();
-		while (ait.hasNext){
+		while (ait.hasNext()){
 			try{
 				//aVal = ait.next() + bit.next();
 				small.value[i++]= ait.next() + bit.next();
 
-			}catch(UsingIteratorPastEndException e)
+			}catch(UsingIteratorPastEndException e){}
 		}
 		return small;
 
