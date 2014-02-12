@@ -33,6 +33,7 @@ public class JumbleUser{
 		int curr;
 		int prev = -999799;
 		while(user.hasNext()){
+			try{
 			if((curr = user.next()) >= prev){
 				counter++;
 			}
@@ -42,6 +43,7 @@ public class JumbleUser{
 			prev = curr;
 			if (counter > longest){
 				longest = counter;
+			}
 			}
 			catch(UsingIteratorPastEndException e){
 				break;
