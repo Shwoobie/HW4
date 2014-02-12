@@ -16,7 +16,7 @@ public class DeltaIt implements SeqIt{
 			itt++;
 			return initial;
 		}
-		else if(hasnext()){
+		else if(hasNext()){
 			nxt += delta;
 			return nxt;
 		}

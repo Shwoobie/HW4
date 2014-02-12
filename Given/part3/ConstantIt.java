@@ -10,7 +10,7 @@ public class ConstantIt implements SeqIt{
 	}
 
 	public int next(){
-		if(hasnext()){
+		if(hasNext()){
 			return itt++;
 		}
 		else{
