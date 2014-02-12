@@ -5,7 +5,7 @@ public class Plus {
 		//int aVal, bVal;
 		if(a.num < b.num){
 			small = a;
-			big = b
+			big = b;
 		}
 		else{
 			small = b;
@@ -21,7 +21,7 @@ public class Plus {
 		//int aVal, bVal;
 		if(a.num < b.num){
 			small = a;
-			big = b
+			big = b;
 		}
 		else{
 			small = b;
@@ -40,7 +40,7 @@ public class Plus {
 		int i = 0;
 		if(a.num < b.num){
 			small = a;
-			big = b
+			big = b;
 		}
 		else{
 			small = b;
