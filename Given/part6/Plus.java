@@ -14,7 +14,7 @@ public class Plus {
 		//ContstantIt ait = small.createSeqIt();
 		//ContstantIt bit = big.createSeqIt();
 		small.value = small.value + big.value;
-		System.err.println("VConstant is: "+small.value);
+		//System.err.println("VConstant is: "+small.value);
 
 		return small;
 	}
