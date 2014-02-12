@@ -43,7 +43,7 @@ public class Plus {
 		Jumble small, last, big;
 		//int aVal, bVal;
 		int i = 0;
-		if(a.num < b.num){
+		if(a.values.length < b.values.length){
 			small = new Jumble(a.values);
 			big = new Jumble(b.values);
 		}
