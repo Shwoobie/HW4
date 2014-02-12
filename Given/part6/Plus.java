@@ -1,7 +1,7 @@
 public class Plus {
 
 	public static Seq plus (Constant a, Constant b){
-		Constant small, big;
+		Constant small, big,last;
 		//int aVal, bVal;
 		if(a.num < b.num){
 			small = new Constant(a.num, a.value);
@@ -15,11 +15,11 @@ public class Plus {
 		//ContstantIt bit = big.createSeqIt();
 		small.value = small.value + big.value;
 		//System.err.println("VConstant is: "+small.value);
-
-		return small;
+		last = new Constant(small.num, small.value);
+		return last;
 	}
 	public static Seq plus (Delta a , Delta b ){
-		Delta small, big;
+		Delta small, last, big;
 		//int aVal, bVal;
 		if(a.num < b.num){
 			small = new Delta(a.num, a.initial, a.delta);
@@ -33,11 +33,14 @@ public class Plus {
 		//ContstantIt bit = big.createSeqIt();
 		small.initial = small.initial + big.initial;
 		small.delta = small.delta + big.delta;
-		return small;
+		
+		last = new Delta(small.num, small.initial, small.delta);
+		return last;
+
 
 	}
 	public static Seq plus (Jumble a, Jumble b){
-		Jumble small, big;
+		Jumble small, last, big;
 		//int aVal, bVal;
 		int i = 0;
 		if(a.num < b.num){
@@ -57,7 +60,8 @@ public class Plus {
 
 			}catch(UsingIteratorPastEndException e){}
 		}
-		return small;
+		last = new Jumble(small.values);
+		return last;
 
 	}
 }
