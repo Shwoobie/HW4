@@ -4,16 +4,17 @@ public class Plus {
 		Constant small, big;
 		//int aVal, bVal;
 		if(a.num < b.num){
-			small = a;
-			big = b;
+			small = new Constant(a.num, a.value);
+			big = new Constant(b.num, b.value);
 		}
 		else{
-			small = b;
-			big = a;
+			small = new Constant(b.num, b.value);
+			big = new Constant(a.num, a.value);
 		}
 		//ContstantIt ait = small.createSeqIt();
 		//ContstantIt bit = big.createSeqIt();
 		small.value = small.value + big.value;
+		System.err.println(small.value);
 		return small;
 	}
 	public static Seq plus (Delta a , Delta b ){
