@@ -10,8 +10,10 @@ public class ConstantIt implements SeqIt{
 	}
 
 	public int next(){
+
 		if(hasNext()){
-			return itt++;
+			itt++;
+			return nxt;
 		}
 		else{
 			System.err.println("ConstantIt called past end");
