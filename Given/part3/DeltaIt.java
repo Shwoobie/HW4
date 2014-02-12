@@ -24,6 +24,7 @@ public class DeltaIt implements SeqIt{
 			System.err.println("DeltaIt called past end");
 			System.exit(1);
 		}
+		return 0;
 
 	}
 

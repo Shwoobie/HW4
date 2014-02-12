@@ -17,7 +17,7 @@ public class ConstantIt implements SeqIt{
 			System.err.println("ConstantIt called past end");
 			System.exit(1);
 		}
-
+		return 0;
 	}
 
 	private int itt;

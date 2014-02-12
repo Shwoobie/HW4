@@ -9,7 +9,7 @@ public class JumbleIt implements SeqIt{
 	}
 
 	public int next(){
-		if(hasnext()){
+		if(hasNext()){
 			return itt[i++];
 		}
 		else{
@@ -17,6 +17,7 @@ public class JumbleIt implements SeqIt{
 			System.exit(1);
 		}
 
+		return 0;
 	}
 
 	private int i;
