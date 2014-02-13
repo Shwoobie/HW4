@@ -187,7 +187,7 @@ public class Plus {
 						try{
 							if(aval != aitt.next()){
 							aflag = 1;
-							System.out.print( "4");
+							//System.out.print( "4");
 							break;
 							}
 						}catch(UsingIteratorPastEndException e){}
@@ -227,6 +227,10 @@ public class Plus {
 					last = new Constant (lmin, aval);
 					return last;
 				}
+			}
+			if (small.num ==1){
+				last = new Constant(small.num, small.initial);
+				return last;
 			}
 			last = new Delta(small.num, small.initial, small.delta);
 			return last;
