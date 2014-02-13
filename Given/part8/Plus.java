@@ -7,13 +7,17 @@ public class Plus {
 		int amin = 0, bmin = 0, lmin = 0;
 		int arank, brank, lrank, prev = 0, aval = 0, bval = 0, adelta = 0, bdelta = 0, aflag = 0, bflag = 0;
 		while(true){
+			
 			if(!aitt.hasNext()){
+				System.out.print( "1");
 				break;
 			}
 			amin++;
 		}
 		while(true){
+
 			if(!bitt.hasNext()){
+				System.out.print( "2");
 				break;
 			}
 			bmin++;
@@ -26,7 +30,9 @@ public class Plus {
 		bitt = b.createSeqIt();
 
 		while(true){
+			System.out.print( "a");
 			if(!aitt.hasNext()){
+				System.out.print( "3");
 				//it's a constant
 				arank = 1;
 				break;
@@ -38,12 +44,14 @@ public class Plus {
 				try{
 					if(aval != aitt.next()){
 					aflag = 1;
+					System.out.print( "4");
 					break;
 					}
 				}catch(UsingIteratorPastEndException e){}
 			}
 			if (aflag == 0){
 				arank = 1;
+				System.out.print( "5");
 				break;
 			}
 			//delta check
@@ -57,6 +65,7 @@ public class Plus {
 				try{
 					if(adelta != aitt.next() - prev){
 						aflag = 1;
+						System.out.print( "6");
 						break;
 					}
 				}catch(UsingIteratorPastEndException e){}
