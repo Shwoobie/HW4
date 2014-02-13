@@ -5,7 +5,7 @@ public class Plus {
 		SeqIt aitt = a.createSeqIt();
 		SeqIt bitt = b.createSeqIt();
 		int amin = 0, bmin = 0, lmin = 0;
-		int arank, brank, lrank, prev, aval = 0, bval = 0, adelta = 0, bdelta = 0, aflag = 0, bflag = 0;
+		int arank, brank, lrank, prev = 0, aval = 0, bval = 0, adelta = 0, bdelta = 0, aflag = 0, bflag = 0;
 		while(true){
 			if(!aitt.hasNext()){
 				break;
