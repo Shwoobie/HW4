@@ -169,11 +169,71 @@ public class Plus {
 			small.initial = small.initial + big.initial;
 			small.delta = small.delta + big.delta;
 			//System.err.println("Small Delta is: "+small.value);
+			if(arank == brank){
+				aitt = small.createSeqIt();
+				
+				while(true){
+					//System.out.print( "a");
+					if(!aitt.hasNext()){
+						//System.out.print( "3");
+						//it's a constant
+						arank = 1;
+						break;
+					}
+					try{
+					aval = aitt.next();
+					}catch(UsingIteratorPastEndException e){}
+					while(aitt.hasNext()){
+						try{
+							if(aval != aitt.next()){
+							aflag = 1;
+							//System.out.print( "4");
+							break;
+							}
+						}catch(UsingIteratorPastEndException e){}
+					}
+					if (aflag == 0){
+						arank = 1;
+						//System.out.print( "5");
+						break;
+					}
+					//delta check
+					aflag = 0;
+					aitt = small.createSeqIt();
+					try{
+						aval = aitt.next();
+						adelta = (prev = aitt.next()) - aval;
+					}catch(UsingIteratorPastEndException e){}
+					while(aitt.hasNext()){
+						try{
+							if(adelta != (nxt = aitt.next()) - prev){
+								aflag = 1;
+								//System.out.print( "6");
+								break;
+							}
+							prev = nxt;
+						}catch(UsingIteratorPastEndException e){}
+					}
+					if (aflag == 0){
+						arank = 2;
+						break;
+					}
+
+					arank = 3; //it should never reach here
+					System.err.println("this should never print");
+					break;
+				}//while
+				if(arank == 1){
+					last = new Constant (lmin, aval);
+					return last;
+				}
+			}
 			last = new Delta(small.num, small.initial, small.delta);
 			return last;
 
 		}
-		else{
+		else{// it is jumble adds
+
 			if(amin > bmin){
 				if(brank == 1){
 					int [] constArray = new int[b.num];
@@ -234,7 +294,7 @@ public class Plus {
 			}
 
 			lmin = (amin > bmin) ? (bmin):(amin);
-			int x = 0;
+			x = 0;
 			aitt = small.createSeqIt();
 			bitt = big.createSeqIt();
 			while (aitt.hasNext()){
@@ -243,6 +303,69 @@ public class Plus {
 					small.values[x++]= aitt.next() + bitt.next();
 
 				}catch(UsingIteratorPastEndException e){}
+			}
+			if (arank == brank){//if they are both jumble types we didnt call any int arrays
+				aitt = small.createSeqIt();
+				
+				while(true){
+					//System.out.print( "a");
+					if(!aitt.hasNext()){
+						//System.out.print( "3");
+						//it's a constant
+						arank = 1;
+						break;
+					}
+					try{
+					aval = aitt.next();
+					}catch(UsingIteratorPastEndException e){}
+					while(aitt.hasNext()){
+						try{
+							if(aval != aitt.next()){
+							aflag = 1;
+							//System.out.print( "4");
+							break;
+							}
+						}catch(UsingIteratorPastEndException e){}
+					}
+					if (aflag == 0){
+						arank = 1;
+						//System.out.print( "5");
+						break;
+					}
+					//delta check
+					aflag = 0;
+					aitt = small.createSeqIt();
+					try{
+						aval = aitt.next();
+						adelta = (prev = aitt.next()) - aval;
+					}catch(UsingIteratorPastEndException e){}
+					while(aitt.hasNext()){
+						try{
+							if(adelta != (nxt = aitt.next()) - prev){
+								aflag = 1;
+								//System.out.print( "6");
+								break;
+							}
+							prev = nxt;
+						}catch(UsingIteratorPastEndException e){}
+					}
+					if (aflag == 0){
+						arank = 2;
+						break;
+					}
+
+					arank = 3;
+					break;
+				}//while
+				if(arank == 1){
+					last = new Constant (lmin, aval);
+					return last;
+				}
+				else if(arank == 2){
+					last = new Delta (lmin, aval, adelta);
+					return last;
+				}
+				
 			}
 			last = new Jumble(small.values);
 			return last;
