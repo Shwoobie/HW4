@@ -4,8 +4,8 @@ public class Plus {
 		Seq small, big, last;//may not need
 		SeqIt aitt = a.createSeqIt();
 		SeqIt bitt = b.createSeqIt();
-		int amin, bmin, lmin = 0;
-		int arank, brank, lrank, prev, aval, bval, adelta, bdelta, aflag = 0, bflag = 0;
+		int amin = 0, bmin = 0, lmin = 0;
+		int arank, brank, lrank, prev, aval = 0, bval = 0, adelta, bdelta, aflag = 0, bflag = 0;
 		while(true){
 			if(!aitt.hasNext()){
 				break;
