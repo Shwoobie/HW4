@@ -9,17 +9,23 @@ public class Plus {
 		while(true){
 			
 			if(!aitt.hasNext()){
-				System.out.print( "1");
+				//System.out.print( "1");
 				break;
 			}
+			try{
+				aitt.next();	
+			}catch(UsingIteratorPastEndException e){}
 			amin++;
 		}
 		while(true){
 
 			if(!bitt.hasNext()){
-				System.out.print( "2");
+				//System.out.print( "2");
 				break;
 			}
+			try{
+				bitt.next();	
+			}catch(UsingIteratorPastEndException e){}
 			bmin++;
 		}
 
@@ -30,9 +36,9 @@ public class Plus {
 		bitt = b.createSeqIt();
 
 		while(true){
-			System.out.print( "a");
+			//System.out.print( "a");
 			if(!aitt.hasNext()){
-				System.out.print( "3");
+				//System.out.print( "3");
 				//it's a constant
 				arank = 1;
 				break;
@@ -44,14 +50,14 @@ public class Plus {
 				try{
 					if(aval != aitt.next()){
 					aflag = 1;
-					System.out.print( "4");
+					//System.out.print( "4");
 					break;
 					}
 				}catch(UsingIteratorPastEndException e){}
 			}
 			if (aflag == 0){
 				arank = 1;
-				System.out.print( "5");
+				//System.out.print( "5");
 				break;
 			}
 			//delta check
@@ -65,7 +71,7 @@ public class Plus {
 				try{
 					if(adelta != aitt.next() - prev){
 						aflag = 1;
-						System.out.print( "6");
+						//System.out.print( "6");
 						break;
 					}
 				}catch(UsingIteratorPastEndException e){}
