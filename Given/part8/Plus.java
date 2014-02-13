@@ -133,7 +133,7 @@ public class Plus {
 		}
 
 
-		lrank = (arank > brank) ? (brank):(arank);
+		lrank = (arank > brank) ? (arank):(brank);
 
 		if(lrank == 1){
 			if(amin > bmin){
