@@ -5,7 +5,7 @@ public class Plus {
 		SeqIt aitt = a.createSeqIt();
 		SeqIt bitt = b.createSeqIt();
 		int amin, bmin, lmin = 0;
-		int arank, brank, lrank, prev, aval, bval, adelta, bdelta, aflag = bflag = 0;
+		int arank, brank, lrank, prev, aval, bval, adelta, bdelta, aflag = 0, bflag = 0;
 		while(true){
 			if(!aitt.hasNext()){
 				break;
@@ -46,7 +46,7 @@ public class Plus {
 			aflag = 0;
 			aitt = a.createSeqIt();
 			aval = aitt.next();
-			adelta = (prev = aitt.next()) - val;
+			adelta = (prev = aitt.next()) - aval;
 			while(aitt.hasNext()){
 				if(adelta != aitt.next() - prev){
 					aflag = 1;
@@ -83,7 +83,7 @@ public class Plus {
 			bflag = 0;
 			bitt = b.createSeqIt();
 			bval = bitt.next();
-			bdelta = (prev = bitt.next()) - val;
+			bdelta = (prev = bitt.next()) - bval;
 			while(bitt.hasNext()){
 				if(bdelta != bitt.next() - prev){
 					bflag = 1;
@@ -100,7 +100,7 @@ public class Plus {
 		}
 
 
-		(arank > brank) ? (lrank = brank):(lrank = arank);
+		lrank = (arank > brank) ? (brank):(arank);
 
 		if(lrank == 1){
 			if(amin > bmin){
@@ -113,7 +113,7 @@ public class Plus {
 			}
 
 
-			 (amin > bmin) ? (lmin = bmin):(lmin = amin);
+			lmin = (amin > bmin) ? (bmin):(amin);
 
 			 small.value = small.value + big.value;
 			//System.err.println("VConstant is: "+small.value);
@@ -131,7 +131,7 @@ public class Plus {
 				big = new Delta(bmin, bval, bdelta);
 			}
 
-			(amin > bmin) ? (lmin = bmin):(lmin = amin);
+			lmin = (amin > bmin) ? (bmin):(amin);
 
 			small.initial = small.initial + big.initial;
 			small.delta = small.delta + big.delta;
@@ -200,7 +200,7 @@ public class Plus {
 				}
 			}
 
-			(amin > bmin) ? (lmin = bmin):(lmin = amin);
+			lmin = (amin > bmin) ? (bmin):(amin);
 			int x = 0;
 			aitt = small.createSeqIt();
 			bitt = big.createSeqIt();
@@ -215,4 +215,6 @@ public class Plus {
 			return last;
 
 		}
+	}
+}
 
