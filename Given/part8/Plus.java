@@ -5,7 +5,7 @@ public class Plus {
 		SeqIt aitt = a.createSeqIt();
 		SeqIt bitt = b.createSeqIt();
 		int amin = 0, bmin = 0, lmin = 0;
-		int arank, brank, lrank, prev = 0, aval = 0, bval = 0, adelta = 0, bdelta = 0, aflag = 0, bflag = 0;
+		int arank, brank, lrank, nxt =0, prev = 0, aval = 0, bval = 0, adelta = 0, bdelta = 0, aflag = 0, bflag = 0;
 		while(true){
 			
 			if(!aitt.hasNext()){
@@ -69,11 +69,12 @@ public class Plus {
 			}catch(UsingIteratorPastEndException e){}
 			while(aitt.hasNext()){
 				try{
-					if(adelta != aitt.next() - prev){
+					if(adelta != (nxt = aitt.next()) - prev){
 						aflag = 1;
 						//System.out.print( "6");
 						break;
 					}
+					prev = nxt;
 				}catch(UsingIteratorPastEndException e){}
 			}
 			if (aflag == 0){
@@ -115,10 +116,11 @@ public class Plus {
 			}catch(UsingIteratorPastEndException e){}
 			while(bitt.hasNext()){
 				try{
-					if(bdelta != bitt.next() - prev){
+					if(bdelta != (nxt = bitt.next()) - prev){
 						bflag = 1;
 						break;
 					}
+					prev = nxt;
 				}catch(UsingIteratorPastEndException e){}
 			}
 			if (bflag == 0){
