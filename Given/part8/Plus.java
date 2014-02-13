@@ -187,7 +187,7 @@ public class Plus {
 						try{
 							if(aval != aitt.next()){
 							aflag = 1;
-							//System.out.print( "4");
+							System.out.print( "4");
 							break;
 							}
 						}catch(UsingIteratorPastEndException e){}
@@ -323,7 +323,7 @@ public class Plus {
 							if(aval != aitt.next()){
 
 							aflag = 1;
-							System.out.print( "4");
+							//System.out.print( "4");
 							break;
 							}
 						}catch(UsingIteratorPastEndException e){}
