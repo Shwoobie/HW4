@@ -294,7 +294,7 @@ public class Plus {
 			}
 
 			lmin = (amin > bmin) ? (bmin):(amin);
-			x = 0;
+			int x = 0;
 			aitt = small.createSeqIt();
 			bitt = big.createSeqIt();
 			while (aitt.hasNext()){
