@@ -171,7 +171,7 @@ public class Plus {
 			//System.err.println("Small Delta is: "+small.value);
 			if(arank == brank){
 				aitt = small.createSeqIt();
-				
+				aflag = 0;
 				while(true){
 					//System.out.print( "a");
 					if(!aitt.hasNext()){
@@ -306,7 +306,7 @@ public class Plus {
 			}
 			if (arank == brank){//if they are both jumble types we didnt call any int arrays
 				aitt = small.createSeqIt();
-				
+				aflag = 0;
 				while(true){
 					//System.out.print( "a");
 					if(!aitt.hasNext()){
