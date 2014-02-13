@@ -321,8 +321,9 @@ public class Plus {
 					while(aitt.hasNext()){
 						try{
 							if(aval != aitt.next()){
+
 							aflag = 1;
-							//System.out.print( "4");
+							System.out.print( "4");
 							break;
 							}
 						}catch(UsingIteratorPastEndException e){}
