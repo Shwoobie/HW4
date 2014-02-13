@@ -5,7 +5,7 @@ public class Plus {
 		SeqIt aitt = a.createSeqIt();
 		SeqIt bitt = b.createSeqIt();
 		int amin = 0, bmin = 0, lmin = 0;
-		int arank, brank, lrank, prev, aval = 0, bval = 0, adelta, bdelta, aflag = 0, bflag = 0;
+		int arank, brank, lrank, prev, aval = 0, bval = 0, adelta = 0, bdelta = 0, aflag = 0, bflag = 0;
 		while(true){
 			if(!aitt.hasNext()){
 				break;
@@ -31,12 +31,16 @@ public class Plus {
 				arank = 1;
 				break;
 			}
+			try{
 			aval = aitt.next();
+			}catch(UsingIteratorPastEndException e){}
 			while(aitt.hasNext()){
-				if(aval != aitt.next()){
+				try{
+					if(aval != aitt.next()){
 					aflag = 1;
 					break;
-				}
+					}
+				}catch(UsingIteratorPastEndException e){}
 			}
 			if (aflag == 0){
 				arank = 1;
@@ -45,13 +49,17 @@ public class Plus {
 			//delta check
 			aflag = 0;
 			aitt = a.createSeqIt();
-			aval = aitt.next();
-			adelta = (prev = aitt.next()) - aval;
+			try{
+				aval = aitt.next();
+				adelta = (prev = aitt.next()) - aval;
+			}catch(UsingIteratorPastEndException e){}
 			while(aitt.hasNext()){
-				if(adelta != aitt.next() - prev){
-					aflag = 1;
-					break;
-				}
+				try{
+					if(adelta != aitt.next() - prev){
+						aflag = 1;
+						break;
+					}
+				}catch(UsingIteratorPastEndException e){}
 			}
 			if (aflag == 0){
 				arank = 2;
@@ -68,12 +76,16 @@ public class Plus {
 				brank = 1;
 				break;
 			}
-			bval = bitt.next();
+			try{
+				bval = bitt.next();
+			}catch(UsingIteratorPastEndException e){}
 			while(bitt.hasNext()){
-				if(bval != bitt.next()){
-					bflag = 1;
-					break;
-				}
+				try{
+					if(bval != bitt.next()){
+						bflag = 1;
+						break;
+					}
+				}catch(UsingIteratorPastEndException e){}
 			}
 			if (bflag == 0){
 				brank = 1;
@@ -82,13 +94,17 @@ public class Plus {
 			//delta check
 			bflag = 0;
 			bitt = b.createSeqIt();
-			bval = bitt.next();
-			bdelta = (prev = bitt.next()) - bval;
+			try{
+				bval = bitt.next();
+				bdelta = (prev = bitt.next()) - bval;
+			}catch(UsingIteratorPastEndException e){}
 			while(bitt.hasNext()){
-				if(bdelta != bitt.next() - prev){
-					bflag = 1;
-					break;
-				}
+				try{
+					if(bdelta != bitt.next() - prev){
+						bflag = 1;
+						break;
+					}
+				}catch(UsingIteratorPastEndException e){}
 			}
 			if (bflag == 0){
 				brank = 2;
