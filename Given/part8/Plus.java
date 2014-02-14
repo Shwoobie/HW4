@@ -241,12 +241,12 @@ public class Plus {
 			if(amin > bmin){
 				if(brank == 1){
 					int [] constArray = new int[b.num];
-					for (int j=0; j < b.num; j++){ constArray[j]= b.value;}
+					for (int j=0; j < b.num; j++){ constArray[j]= bval;}
 					small = new Jumble(constArray);
 				}
 				else if (brank == 2) {
 					int [] constArray = new int[b.num];
-					for (int j=0; j < b.num; j++){ constArray[j]= (b.values[0]+(j*b.delta));}
+					for (int j=0; j < b.num; j++){ constArray[j]= (bval+(j*bdelta));}
 					small = new Jumble(constArray);
 				}
 				else{
@@ -255,13 +255,13 @@ public class Plus {
 
 				if(arank == 1){
 					int [] constArray = new int[a.num];
-					for (int j=0; j < a.num; j++){ constArray[j]= a.value;}
+					for (int j=0; j < a.num; j++){ constArray[j]= aval;}
 					big = new Jumble(constArray);
 				}
 				else if (arank == 2) {
 					//System.out.print( "e");
 					int [] constArray = new int[a.num];
-					for (int j=0; j < a.num; j++){ constArray[j]= (a.values[0]+(j*a.delta));}
+					for (int j=0; j < a.num; j++){ constArray[j]= (aval+(j*adelta));}
 					big = new Jumble(constArray);
 				}
 				else{
@@ -271,12 +271,12 @@ public class Plus {
 			else{
 				if(brank == 1){
 					int [] constArray = new int[b.num];
-					for (int j=0; j < b.num; j++){ constArray[j]= b.value;}
+					for (int j=0; j < b.num; j++){ constArray[j]= bval;}
 					big = new Jumble(constArray);
 				}
 				else if (brank == 2) {
 					int [] constArray = new int[b.num];
-					for (int j=0; j < b.num; j++){ constArray[j]= (b.values[0]+(j*b.delta));}
+					for (int j=0; j < b.num; j++){ constArray[j]= (bval+(j*bdelta));}
 					big = new Jumble(constArray);
 				}
 				else{
@@ -285,12 +285,12 @@ public class Plus {
 
 				if(arank == 1){
 					int [] constArray = new int[a.num];
-					for (int j=0; j < a.num; j++){ constArray[j]= a.value;}
+					for (int j=0; j < a.num; j++){ constArray[j]= aval;}
 					small = new Jumble(constArray);
 				}
 				else if (arank == 2) {
 					int [] constArray = new int[a.num];
-					for (int j=0; j < a.num; j++){ constArray[j]= (a.values[0]+(j*a.delta));}
+					for (int j=0; j < a.num; j++){ constArray[j]= (aval+(j*adelta));}
 					small = new Jumble(constArray);
 				}
 				else{
