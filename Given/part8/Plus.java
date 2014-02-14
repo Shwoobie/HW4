@@ -348,7 +348,7 @@ public class Plus {
 				}
 				aflag = 0;
 				while(true){
-					System.out.print( "a");
+					//System.out.print( "a");
 					if(!aitt.hasNext()){
 						//System.out.print( "3");
 						//it's a constant
@@ -359,7 +359,7 @@ public class Plus {
 					aval = aitt.next();
 					}catch(UsingIteratorPastEndException e){}
 					while(aitt.hasNext()){
-						try{System.out.print( "4");
+						try{//System.out.print( "4");
 							if(aval != aitt.next()){
 
 							aflag = 1;
@@ -370,7 +370,7 @@ public class Plus {
 					}
 					if (aflag == 0){
 						arank = 1;
-						System.out.print( "5");
+						//System.out.print( "5");
 						break;
 					}
 					//delta check
@@ -406,45 +406,41 @@ public class Plus {
 					break;
 				}//while
 
-
 				if (aismall == 1){
-						aitt = a.createSeqIt();
-						bitt = b.createSeqIt();
-					}
-					else{
-						aitt = b.createSeqIt();
-						bitt = a.createSeqIt();
-					}
-					x=0;
-
-
-
-
+					aitt = a.createSeqIt();
+					bitt = b.createSeqIt();
+				}
+				else{
+					aitt = b.createSeqIt();
+					bitt = a.createSeqIt();
+				}
+				x=0;
 
 				if(arank == 1){
-					System.err.print("this should never print");
+					//System.err.print("this should never print");
 					last = new Constant (lmin, aval);
 					while (aitt.hasNext()){
 						try{
-					//System.out.print( "a");
-					//aVal = ait.next() + bit.next();
-					small.values[x++]= aitt.next() - bitt.next();
+							//System.out.print( "a");
+							//aVal = ait.next() + bit.next();
+							small.values[x++]= aitt.next() - bitt.next();
 
-				}catch(UsingIteratorPastEndException e){}
-		}
+						}catch(UsingIteratorPastEndException e){}
+					}
 
 					return last;
 				}
+
 				else if(arank == 2){
 					last = new Delta (lmin, aval, adelta);
 					while (aitt.hasNext()){
-					try{
-					////System.out.print( "a");
-					//aVal = ait.next() + bit.next();
-					small.values[x++]= aitt.next() - bitt.next();
+						try{
+							////System.out.print( "a");
+							//aVal = ait.next() + bit.next();
+							small.values[x++]= aitt.next() - bitt.next();
 
-				}catch(UsingIteratorPastEndException e){}
-			}
+						}catch(UsingIteratorPastEndException e){}
+					}
 
 					return last;
 				}
@@ -454,34 +450,24 @@ public class Plus {
 
 
 			if (aismall == 1){
-						aitt = a.createSeqIt();
-						bitt = b.createSeqIt();
-					}
-					else{
-						aitt = b.createSeqIt();
-						bitt = a.createSeqIt();
-					}
-					x=0;
-
-
-
-
-
-
-
-
+				aitt = a.createSeqIt();
+				bitt = b.createSeqIt();
+			}
+			else{
+				aitt = b.createSeqIt();
+				bitt = a.createSeqIt();
+			}
+			x=0;
 
 			last = new Jumble(small.values);
 			while (aitt.hasNext()){
-		try{
+				try{
 					//System.out.print( "a");
 					//aVal = ait.next() + bit.next();
-			small.values[x++]= aitt.next() - bitt.next();
+					small.values[x++]= aitt.next() - bitt.next();
 
-		}catch(UsingIteratorPastEndException e){}
-	}
-
-
+				}catch(UsingIteratorPastEndException e){}
+			}
 			return last;
 
 		}
