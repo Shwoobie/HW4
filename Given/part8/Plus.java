@@ -321,6 +321,14 @@ public class Plus {
 			int x = 0;
 			//aitt = small.createSeqIt();
 			//bitt = big.createSeqIt();
+			if (aismall == 1){
+					aitt = a.createSeqIt();
+					bitt = b.createSeqIt();
+				}
+				else{
+					aitt = b.createSeqIt();
+					bitt = a.createSeqIt();
+				}
 			while (aitt.hasNext()){
 				try{
 					//System.out.print( "a");
