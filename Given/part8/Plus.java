@@ -240,13 +240,13 @@ public class Plus {
 
 			if(amin > bmin){
 				if(brank == 1){
-					int [] constArray = new int[bnum];
-					for (int j=0; j < bnum; j++){ constArray[j]= bval;}
+					int [] constArray = new int[bmin];
+					for (int j=0; j < bmin; j++){ constArray[j]= bval;}
 					small = new Jumble(constArray);
 				}
 				else if (brank == 2) {
-					int [] constArray = new int[bnum];
-					for (int j=0; j < bnum; j++){ constArray[j]= (bval+(j*bdelta));}
+					int [] constArray = new int[bmin];
+					for (int j=0; j < bmin; j++){ constArray[j]= (bval+(j*bdelta));}
 					small = new Jumble(constArray);
 				}
 				else{
@@ -254,14 +254,14 @@ public class Plus {
 				}
 
 				if(arank == 1){
-					int [] constArray = new int[anum];
-					for (int j=0; j < anum; j++){ constArray[j]= aval;}
+					int [] constArray = new int[amin];
+					for (int j=0; j < amin; j++){ constArray[j]= aval;}
 					big = new Jumble(constArray);
 				}
 				else if (arank == 2) {
 					//System.out.print( "e");
-					int [] constArray = new int[anum];
-					for (int j=0; j < anum; j++){ constArray[j]= (aval+(j*adelta));}
+					int [] constArray = new int[amin];
+					for (int j=0; j < amin; j++){ constArray[j]= (aval+(j*adelta));}
 					big = new Jumble(constArray);
 				}
 				else{
@@ -270,13 +270,13 @@ public class Plus {
 			}
 			else{
 				if(brank == 1){
-					int [] constArray = new int[bnum];
-					for (int j=0; j < bnum; j++){ constArray[j]= bval;}
+					int [] constArray = new int[bmin];
+					for (int j=0; j < bmin; j++){ constArray[j]= bval;}
 					big = new Jumble(constArray);
 				}
 				else if (brank == 2) {
-					int [] constArray = new int[bnum];
-					for (int j=0; j < bnum; j++){ constArray[j]= (bval+(j*bdelta));}
+					int [] constArray = new int[bmin];
+					for (int j=0; j < bmin; j++){ constArray[j]= (bval+(j*bdelta));}
 					big = new Jumble(constArray);
 				}
 				else{
@@ -284,13 +284,13 @@ public class Plus {
 				}
 
 				if(arank == 1){
-					int [] constArray = new int[anum];
-					for (int j=0; j < anum; j++){ constArray[j]= aval;}
+					int [] constArray = new int[amin];
+					for (int j=0; j < amin; j++){ constArray[j]= aval;}
 					small = new Jumble(constArray);
 				}
 				else if (arank == 2) {
-					int [] constArray = new int[anum];
-					for (int j=0; j < anum; j++){ constArray[j]= (aval+(j*adelta));}
+					int [] constArray = new int[amin];
+					for (int j=0; j < amin; j++){ constArray[j]= (aval+(j*adelta));}
 					small = new Jumble(constArray);
 				}
 				else{
