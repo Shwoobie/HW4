@@ -259,6 +259,7 @@ public class Plus {
 					big = new Jumble(constArray);
 				}
 				else if (arank == 2) {
+					System.out.print( "e");
 					int [] constArray = new int[a.num];
 					for (int j=0; j < a.num; j++){ constArray[j]= (a.initial+(j*a.delta));}
 					big = new Jumble(constArray);
