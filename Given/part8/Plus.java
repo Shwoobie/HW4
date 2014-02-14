@@ -380,7 +380,7 @@ public class Plus {
 					break;
 				}//while
 				if(arank == 1){
-					System.err.println("this should never print");
+					System.err.print("this should never print");
 					last = new Constant (lmin, aval);
 					return last;
 				}
