@@ -304,7 +304,7 @@ public class Plus {
 			bitt = big.createSeqIt();
 			while (aitt.hasNext()){
 				try{
-					System.out.print( "a");
+					//System.out.print( "a");
 					//aVal = ait.next() + bit.next();
 					small.values[x++]= aitt.next() + bitt.next();
 
