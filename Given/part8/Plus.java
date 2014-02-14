@@ -173,9 +173,11 @@ public class Plus {
 			if(arank == brank){
 				if (aismall == 1){
 					aitt = a.createSeqIt();
+					bitt = b.createSeqIt();
 				}
 				else{
 					aitt = b.createSeqIt();
+					bitt = a.createSeqIt();
 				}
 				aflag = 0;
 				while(true){
@@ -207,9 +209,11 @@ public class Plus {
 					aflag = 0;
 					if (aismall == 1){
 						aitt = a.createSeqIt();
+						bitt = b.createSeqIt();
 					}
 					else{
 						aitt = b.createSeqIt();
+						bitt = a.createSeqIt();
 					}
 					try{
 						aval = aitt.next();
@@ -327,10 +331,12 @@ public class Plus {
 			}
 			if (arank == brank){//if they are both jumble types we didnt call any int arrays
 				if (aismall == 1){
-						aitt = a.createSeqIt();
+					aitt = a.createSeqIt();
+					bitt = b.createSeqIt();
 				}
 				else{
 					aitt = b.createSeqIt();
+					bitt = a.createSeqIt();
 				}
 				aflag = 0;
 				while(true){
@@ -363,9 +369,11 @@ public class Plus {
 					aflag = 0;
 					if (aismall == 1){
 						aitt = a.createSeqIt();
+						bitt = b.createSeqIt();
 					}
 					else{
 						aitt = b.createSeqIt();
+						bitt = a.createSeqIt();
 					}
 					try{
 						aval = aitt.next();
@@ -392,41 +400,41 @@ public class Plus {
 				if(arank == 1){
 					System.err.print("this should never print");
 					last = new Constant (lmin, aval);
-					while (aitt.hasNext()){
-						try{
+					//while (aitt.hasNext()){
+					//	try{
 					//System.out.print( "a");
 					//aVal = ait.next() + bit.next();
-					small.values[x++]= aitt.next() - bitt.next();
+					//small.values[x++]= aitt.next() - bitt.next();
 
-				}catch(UsingIteratorPastEndException e){}
-			}
+				//}catch(UsingIteratorPastEndException e){}
+			//}
 
 					return last;
 				}
 				else if(arank == 2){
 					last = new Delta (lmin, aval, adelta);
-					while (aitt.hasNext()){
-					try{
-					//System.out.print( "a");
+					//while (aitt.hasNext()){
+					//try{
+					////System.out.print( "a");
 					//aVal = ait.next() + bit.next();
-					small.values[x++]= aitt.next() - bitt.next();
+					//small.values[x++]= aitt.next() - bitt.next();
 
-				}catch(UsingIteratorPastEndException e){}
-			}
+				//}catch(UsingIteratorPastEndException e){}
+			//}
 
 					return last;
 				}
 				
 			}
 			last = new Jumble(small.values);
-			while (aitt.hasNext()){
-				try{
+			//while (aitt.hasNext()){
+			//	try{
 					//System.out.print( "a");
 					//aVal = ait.next() + bit.next();
-					small.values[x++]= aitt.next() - bitt.next();
+					//small.values[x++]= aitt.next() - bitt.next();
 
-				}catch(UsingIteratorPastEndException e){}
-			}
+			//	}catch(UsingIteratorPastEndException e){}
+			//}
 
 
 			return last;
