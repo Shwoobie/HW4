@@ -1000,8 +1000,7 @@ public class Main {
              System.out.println( "Plus.plus(h9,h9).min()" + ":" + (Plus.plus(h9,h9).min()) + ":"); };
  Jumble k1 = new Jumble( new int [] {0, 1, 0, 1, 0, 1} );
  Jumble k2 = new Jumble( new int [] {0, -1, 0, -1, 0, -1} );
- {// Seq s = Plus.plus(k1,k2);
-  System.out.println("s="+ "Plus.plus(k1,k2)" + ";"); 
+ { Seq s = Plus.plus(k1,k2);  System.out.println("s="+ "Plus.plus(k1,k2)" + ";"); 
              System.out.print( "Plus.plus(k1,k2)" + ":"); 
              System.out.print(Plus.plus(k1,k2)); 
              System.out.println(":"); 
