@@ -392,15 +392,43 @@ public class Plus {
 				if(arank == 1){
 					System.err.print("this should never print");
 					last = new Constant (lmin, aval);
+					while (aitt.hasNext()){
+						try{
+					//System.out.print( "a");
+					//aVal = ait.next() + bit.next();
+					small.values[x++]= aitt.next() - bitt.next();
+
+				}catch(UsingIteratorPastEndException e){}
+			}
+
 					return last;
 				}
 				else if(arank == 2){
 					last = new Delta (lmin, aval, adelta);
+					while (aitt.hasNext()){
+					try{
+					//System.out.print( "a");
+					//aVal = ait.next() + bit.next();
+					small.values[x++]= aitt.next() - bitt.next();
+
+				}catch(UsingIteratorPastEndException e){}
+			}
+
 					return last;
 				}
 				
 			}
 			last = new Jumble(small.values);
+			while (aitt.hasNext()){
+				try{
+					//System.out.print( "a");
+					//aVal = ait.next() + bit.next();
+					small.values[x++]= aitt.next() - bitt.next();
+
+				}catch(UsingIteratorPastEndException e){}
+			}
+
+
 			return last;
 
 		}
