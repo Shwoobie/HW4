@@ -5,7 +5,7 @@ public class Plus {
 		SeqIt aitt = a.createSeqIt();
 		SeqIt bitt = b.createSeqIt();
 		int amin = 0, bmin = 0, lmin = 0;
-		int arank, brank, lrank, nxt =0, prev = 0, aval = 0, bval = 0, adelta = 0, bdelta = 0, aflag = 0, bflag = 0;
+		int arank, brank, lrank, nxt =0, prev = 0, aval = 0, bval = 0, adelta = 0, bdelta = 0, aflag = 0, bflag = 0, aismall = 0, bismall = 0;
 		while(true){
 			
 			if(!aitt.hasNext()){
@@ -162,6 +162,7 @@ public class Plus {
 			else{
 				small = new Delta(amin, aval, adelta);
 				big = new Delta(bmin, bval, bdelta);
+				aismall = 1;
 			}
 
 			lmin = (amin > bmin) ? (bmin):(amin);
@@ -170,7 +171,7 @@ public class Plus {
 			small.delta = small.delta + big.delta;
 			//System.err.println("Small Delta is: "+small.value);
 			if(arank == brank){
-				if (arank == lrank){
+				if (aismall == 1){
 					aitt = a.createSeqIt();
 				}
 				else{
@@ -204,7 +205,7 @@ public class Plus {
 					}
 					//delta check
 					aflag = 0;
-					if (arank == lrank){
+					if (aismall == 1){
 						aitt = a.createSeqIt();
 					}
 					else{
