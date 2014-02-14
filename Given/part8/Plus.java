@@ -239,7 +239,7 @@ public class Plus {
 					return last;
 				}
 			}
-			if (small.num ==1){
+			if (small.num ==1 || small.delta == 0){
 				last = new Constant(small.num, small.initial);
 				return last;
 			}
