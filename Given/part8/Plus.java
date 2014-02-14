@@ -340,11 +340,11 @@ public class Plus {
 					aval = aitt.next();
 					}catch(UsingIteratorPastEndException e){}
 					while(aitt.hasNext()){
-						try{
+						try{System.out.print( "4");
 							if(aval != aitt.next()){
 
 							aflag = 1;
-							System.out.print( "4");
+							
 							break;
 							}
 						}catch(UsingIteratorPastEndException e){}
