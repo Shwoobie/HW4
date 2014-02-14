@@ -334,7 +334,7 @@ public class Plus {
 				}
 				aflag = 0;
 				while(true){
-					//System.out.print( "a");
+					System.out.print( "a");
 					if(!aitt.hasNext()){
 						//System.out.print( "3");
 						//it's a constant
