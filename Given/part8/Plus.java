@@ -296,7 +296,7 @@ public class Plus {
 					big = b;
 					bitt = b.createSeqIt();
 				}
-
+				aismall = 1;
 				if(arank == 1){
 					int [] constArray = new int[amin];
 					for (int j=0; j < amin; j++){ constArray[j]= aval;}
@@ -326,7 +326,12 @@ public class Plus {
 				}catch(UsingIteratorPastEndException e){}
 			}
 			if (arank == brank){//if they are both jumble types we didnt call any int arrays
-				aitt = a.createSeqIt();
+				if (aismall == 1){
+						aitt = a.createSeqIt();
+				}
+				else{
+					aitt = b.createSeqIt();
+				}
 				aflag = 0;
 				while(true){
 					//System.out.print( "a");
@@ -356,7 +361,12 @@ public class Plus {
 					}
 					//delta check
 					aflag = 0;
-					aitt = a.createSeqIt();
+					if (aismall == 1){
+						aitt = a.createSeqIt();
+					}
+					else{
+						aitt = b.createSeqIt();
+					}
 					try{
 						aval = aitt.next();
 						adelta = (prev = aitt.next()) - aval;
