@@ -405,6 +405,22 @@ public class Plus {
 					arank = 3;
 					break;
 				}//while
+
+
+				if (aismall == 1){
+						aitt = a.createSeqIt();
+						bitt = b.createSeqIt();
+					}
+					else{
+						aitt = b.createSeqIt();
+						bitt = a.createSeqIt();
+					}
+
+
+
+
+
+
 				if(arank == 1){
 					System.err.print("this should never print");
 					last = new Constant (lmin, aval);
@@ -434,6 +450,27 @@ public class Plus {
 				}
 					
 			}
+
+
+
+			if (aismall == 1){
+						aitt = a.createSeqIt();
+						bitt = b.createSeqIt();
+					}
+					else{
+						aitt = b.createSeqIt();
+						bitt = a.createSeqIt();
+					}
+
+
+
+
+
+
+
+
+
+			
 			last = new Jumble(small.values);
 			while (aitt.hasNext()){
 		try{
