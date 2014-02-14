@@ -415,7 +415,7 @@ public class Plus {
 						aitt = b.createSeqIt();
 						bitt = a.createSeqIt();
 					}
-
+					x=0;
 
 
 
@@ -461,6 +461,7 @@ public class Plus {
 						aitt = b.createSeqIt();
 						bitt = a.createSeqIt();
 					}
+					x=0;
 
 
 
@@ -470,7 +471,6 @@ public class Plus {
 
 
 
-			
 			last = new Jumble(small.values);
 			while (aitt.hasNext()){
 		try{
