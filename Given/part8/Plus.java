@@ -250,7 +250,7 @@ public class Plus {
 					small = new Jumble(constArray);
 				}
 				else{
-					small = new Jumble(b.values);
+					small = b;
 				}
 
 				if(arank == 1){
@@ -265,7 +265,7 @@ public class Plus {
 					big = new Jumble(constArray);
 				}
 				else{
-					big = new Jumble(a.values);
+					big = a;
 				}
 			}
 			else{
@@ -280,7 +280,7 @@ public class Plus {
 					big = new Jumble(constArray);
 				}
 				else{
-					big = new Jumble(b.values);
+					big = b;
 				}
 
 				if(arank == 1){
@@ -294,7 +294,7 @@ public class Plus {
 					small = new Jumble(constArray);
 				}
 				else{
-					small = new Jumble(a.values);
+					small = a;
 				}
 			}
 
