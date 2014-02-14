@@ -170,7 +170,12 @@ public class Plus {
 			small.delta = small.delta + big.delta;
 			//System.err.println("Small Delta is: "+small.value);
 			if(arank == brank){
-				aitt = a.createSeqIt();
+				if (arank == lrank){
+					aitt = a.createSeqIt();
+				}
+				else{
+					aitt = b.createSeqIt();
+				}
 				aflag = 0;
 				while(true){
 					//System.out.print( "a");
@@ -199,7 +204,12 @@ public class Plus {
 					}
 					//delta check
 					aflag = 0;
-					aitt = a.createSeqIt();
+					if (arank == lrank){
+						aitt = a.createSeqIt();
+					}
+					else{
+						aitt = b.createSeqIt();
+					}
 					try{
 						aval = aitt.next();
 						adelta = (prev = aitt.next()) - aval;
