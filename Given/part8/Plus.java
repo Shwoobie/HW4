@@ -344,14 +344,14 @@ public class Plus {
 							if(aval != aitt.next()){
 
 							aflag = 1;
-							//System.out.print( "4");
+							System.out.print( "4");
 							break;
 							}
 						}catch(UsingIteratorPastEndException e){}
 					}
 					if (aflag == 0){
 						arank = 1;
-						//System.out.print( "5");
+						System.out.print( "5");
 						break;
 					}
 					//delta check
