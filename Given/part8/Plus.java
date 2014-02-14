@@ -170,7 +170,7 @@ public class Plus {
 			small.delta = small.delta + big.delta;
 			//System.err.println("Small Delta is: "+small.value);
 			if(arank == brank){
-				aitt = small.createSeqIt();
+				aitt = a.createSeqIt();
 				aflag = 0;
 				while(true){
 					//System.out.print( "a");
@@ -199,7 +199,7 @@ public class Plus {
 					}
 					//delta check
 					aflag = 0;
-					aitt = small.createSeqIt();
+					aitt = a.createSeqIt();
 					try{
 						aval = aitt.next();
 						adelta = (prev = aitt.next()) - aval;
@@ -251,6 +251,7 @@ public class Plus {
 				}
 				else{
 					small = b;
+					aitt = b.createSeqIt();
 				}
 
 				if(arank == 1){
@@ -266,6 +267,7 @@ public class Plus {
 				}
 				else{
 					big = a;
+					bitt = a.createSeqIt();
 				}
 			}
 			else{
@@ -281,6 +283,7 @@ public class Plus {
 				}
 				else{
 					big = b;
+					bitt = b.createSeqIt();
 				}
 
 				if(arank == 1){
@@ -295,13 +298,14 @@ public class Plus {
 				}
 				else{
 					small = a;
+					aitt = a.createSeqIt();
 				}
 			}
 
 			lmin = (amin > bmin) ? (bmin):(amin);
 			int x = 0;
-			aitt = small.createSeqIt();
-			bitt = big.createSeqIt();
+			//aitt = small.createSeqIt();
+			//bitt = big.createSeqIt();
 			while (aitt.hasNext()){
 				try{
 					//System.out.print( "a");
@@ -311,7 +315,7 @@ public class Plus {
 				}catch(UsingIteratorPastEndException e){}
 			}
 			if (arank == brank){//if they are both jumble types we didnt call any int arrays
-				aitt = small.createSeqIt();
+				aitt = a.createSeqIt();
 				aflag = 0;
 				while(true){
 					//System.out.print( "a");
@@ -341,7 +345,7 @@ public class Plus {
 					}
 					//delta check
 					aflag = 0;
-					aitt = small.createSeqIt();
+					aitt = a.createSeqIt();
 					try{
 						aval = aitt.next();
 						adelta = (prev = aitt.next()) - aval;
