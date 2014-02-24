@@ -23,4 +23,4 @@ part6: Works on all tests.
 part7: Works on all tests.
 part8: Works on all tests.
 
-Overall: Any comment/discussion related to this HW.
+Overall: Part 8, we felt like we had an elegant solution because we didn't think our code fit the description for Brute force. The code itself looks like a lot, but we just had to copy and paste a lot of reused code. We could have put it into separate functions in the Plus class to make it look less verbose, but decided not to.
